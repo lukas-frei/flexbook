@@ -1,0 +1,407 @@
+/* deafult
+############################################ */
+/* style for page */
+body {
+  font-family: helvetica;
+}
+
+/* notes
+############################################ */
+/* name #flb_profile required */
+/* variables
+############################################ */
+/* font used on all elements */
+/* width of list elements */
+/* color of text */
+/* color of primary buttons */
+/* color of text of primary buttons */
+/* color of primary buttons on hover */
+/* color of text of primary buttons on hover */
+/* color of secondary buttons */
+/* color of text of secondary buttons on hover */
+/* color of prepare login buttons */
+/* font
+############################################ */
+.flb_output {
+  font-family: Helvetica, Arial, Sans-Serif;
+  color: #333333;
+  font-size: 16px;
+  line-height: 1.3em;
+}
+
+input, .flb_button {
+  font-size: 12px;
+  line-height: 1em;
+}
+
+/* controls
+############################################ */
+/* buttons - secondary */
+input[type=button],
+.flb_button,
+.ui-dialog-buttonset button[type=button] {
+  padding: 6px 15px 5px 15px;
+  margin-top: 3px;
+  margin-right: 3px;
+  border: 1px solid #333333;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 400 !important;
+  color: #333333;
+}
+
+input[type=button]:hover,
+.flb_button:hover {
+  color: white;
+  background-color: #333333;
+}
+
+/* buttons - primary */
+#flexbook_profile_flb_profile_login,
+#flexbook_profile_flb_profile_save,
+#flexbook_profile_flb_password_change,
+#flexbook_profile_flb_registration_next,
+#flexbook_profile_flb_registration_finish,
+.flb_event_list_item_button_reserve,
+.flb_event_detail .button input:last-child {
+  color: white;
+  background-color: #42A861;
+  border: 1px solid #42A861;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+#flexbook_profile_flb_profile_login:hover,
+#flexbook_profile_flb_profile_save:hover,
+#flexbook_profile_flb_password_change:hover,
+#flexbook_profile_flb_registration_next:hover,
+#flexbook_profile_flb_registration_finish:hover,
+.flb_event_list_item_button_reserve:hover,
+.flb_event_detail .button input:last-child:hover {
+  color: white;
+  background-color: #3CBD61;
+  border-color: #3CBD61;
+  /*box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);*/
+}
+
+/* buttons - prepare login */
+#flexbook_profile2_flb_profile_login_prepare,
+#flexbook_profile2_flb_profile_registrate_prepare {
+  border-color: #42A861;
+  color: #42A861;
+}
+
+#flexbook_profile2_flb_profile_login_prepare:hover,
+#flexbook_profile2_flb_profile_registrate_prepare:hover {
+  color: white;
+  background-color: #42A861;
+}
+
+/* controls - defaults */
+.flb_output input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.flb_output button {
+  font-size: 12px !important;
+  font-family: Helvetica, Arial, Sans-Serif !important;
+}
+
+/* inputs */
+.flb_output input[type=text], .flb_output input[type=password] {
+  border: 1px solid #9B9B9B;
+  margin: 2px;
+  padding: 2px 4px;
+}
+
+/* calendar and dialog defaults corections */
+.ui-dialog-buttonset button[type=button],
+.fc-left button[type=button] {
+  background-color: transparent !important;
+  background-image: none !important;
+  border: 1px solid #333333 !important;
+}
+
+.ui-button-text-only .ui-button-text {
+  padding: 0 !important;
+}
+
+.ui-dialog-buttonset button[type=button]:hover {
+  color: white !important;
+  background-color: #333333 !important;
+}
+
+/* lists
+############################################ */
+.flb_list {
+  max-width: 750px;
+}
+
+.flb_event_list_item,
+.flb_resource_list_item {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 15px;
+}
+
+.flb_event_list_item_desc,
+.flb_resource_list_item_desc {
+  margin-top: 5px;
+  margin-right: 20px;
+  border-bottom: 1px solid #D7D7D7;
+  flex-grow: 1;
+}
+
+/* detail reservation */
+.flb_event_detail .input {
+  margin-top: 30px !important;
+}
+
+div.flb_event_detail div.label {
+  min-width: 175px !important;
+}
+
+/* calendar
+############################################ */
+.flb_calendar_legend > div {
+  line-height: 1.3;
+  margin-bottom: 3px;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+div.flb_calendar_legend div {
+  padding: 4px 8px !important;
+}
+
+.fc-left h2 {
+  font-weight: 400;
+  font-size: 1.2em;
+}
+
+.fc-head {
+  background-color: #EEEEEE;
+}
+
+.fc-widget-header th {
+  padding-top: 0.5em !important;
+  padding-bottom: 0.5em !important;
+}
+
+.fc-bgevent, .fc-event {
+  padding: 5px;
+  border: 1px solid gray !important;
+}
+
+/* events */
+/* unavailability */
+div.flb_calendar .fc-bgevent {
+  background-color: #FEAFA6;
+  opacity: 1;
+}
+
+/* occupied by reservation */
+div.flb_calendar .event_reservation {
+  background-color: MediumPurple;
+}
+
+/* event on resource */
+div.flb_calendar .event_providerEvent {
+  background-color: LightGreen;
+  color: black;
+}
+
+/* dialog
+############################################ */
+/* dialog window */
+.ui-dialog,
+div.flb_profile div.flb_profile_extra {
+  background-color: #FAFAFA !important;
+  border: 1px solid #9B9B9B !important;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  width: auto !important;
+}
+
+/* dialog header */
+.ui-dialog-titlebar {
+  background-color: transparent !important;
+  border: none !important;
+  margin-top: 20px;
+}
+
+.ui-dialog-title {
+  padding-left: 0.75em;
+  font-size: 1.2em;
+}
+
+/* dialog hide borders */
+.ui-dialog fieldset {
+  border: none !important;
+  padding-bottom: 0;
+}
+
+.ui-dialog-buttonpane {
+  border: none !important;
+}
+
+.ui-dialog-buttonset {
+  float: left !important;
+  margin-left: 1.5em;
+  margin-bottom: 20px;
+}
+
+/* */
+.ui-dialog .ui-dialog-titlebar-close {
+  top: 0px !important;
+  right: 7px !important;
+  background-color: none !important;
+}
+
+.flb_inputTime {
+  width: 66px;
+}
+
+/* profile dialogs
+############################################ */
+/* global */
+div.flb_profile div.flb_profile_extra {
+  padding: 20px !important;
+}
+
+.label.flb_title {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.flb_profile_extra input[type=text] {
+  font-family: Helvetica, Arial, Sans-Serif;
+}
+
+.flb_profile_extra div.button {
+  margin-top: 10px;
+}
+
+/* inputs */
+#flexbook_profile_flb_profile_email_ro {
+  color: gray;
+}
+
+.intl-tel-input {
+  margin-top: 1px;
+  margin-bottom: -3px;
+}
+
+#flexbook_profile_flb_profile_phone,
+#flexbook_profile_flb_registration_phone {
+  width: 310px;
+  margin-left: 2px;
+}
+
+#flexbook_profile_flb_profile_state {
+  width: 310px;
+  margin-top: 2px;
+  margin-left: 2px;
+}
+
+div.flb_profile div.flb_profile_attributecategory_soubor {
+  border: none !important;
+  padding: 0 !important;
+}
+
+div.file {
+  margin-left: 2px;
+  margin-bottom: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+#flb_profile_account {
+  border: none;
+  padding: 0;
+}
+
+.flb_profile_extra #flexbook_profile_flb_profile_add_account {
+  float: none;
+  margin: 0;
+  padding: 3px 6px 2px 6px;
+}
+
+input[type=checkbox] {
+  appearance: checkbox;
+  -webkit-appearance: checkbox;
+  font-size: 16px;
+}
+
+/* list of reservations */
+#flexbook_profile_flb_reservation_list_table {
+  max-width: 650px;
+}
+
+div.flb_reservation_list .flb_reservation_list_item_price {
+  text-align: left !important;
+}
+
+#flexbook_profile_flb_reservation_list_past {
+  padding-bottom: 10px;
+}
+
+div.flb_reservation_list td {
+  border-bottom: 1px solid gray;
+}
+
+/* buttons to left */
+#flexbook_profile_flb_reservation_list_data_body td:last-child {
+  display: block;
+  float: left;
+  position: absolute;
+  left: 20px;
+  padding-top: 55px;
+  border-bottom: none;
+}
+
+#flexbook_profile_flb_reservation_list_data_body tr td {
+  padding-bottom: 40px;
+  padding-top: 10px;
+}
+
+.flb_reservation_list_table tbody tr th:last-child {
+  display: none;
+}
+
+/* login */
+.flb_registration_email_value {
+  min-width: 0 !important;
+  margin-right: 10px;
+  margin-top: 3px;
+}
+
+/* mobile
+############################################ */
+/* popup */
+@media (max-width: 650px) {
+  div.flb_profile div.flb_profile_extra {
+    top: -1px !important;
+    left: -1px !important;
+    width: 100% !important;
+    height: 95% !important;
+  }
+}
+
+/* lists */
+@media (max-width: 650px) {
+  .flb_event_list_item, .flb_resource_list_item {
+    display: inline-block;
+    width: 100%;
+  }
+  .flb_event_list_item .flb_button,
+  .flb_resource_list_item .flb_button {
+    float: left;
+  }
+  .flb_event_list_item .flb_event_list_item_desc,
+  .flb_resource_list_item .flb_resource_list_item_desc {
+    border-bottom: none;
+  }
+}

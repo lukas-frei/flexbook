@@ -1,0 +1,223 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en-US">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>
+      FlexBook Examples
+    </title>
+
+    <!-- FlexBook JavaScripts -->
+    <script src="http://www.flexbook.cz/jq/jquery.js"></script>
+    <script src="http://www.flexbook.cz/flbv2.js"></script>
+
+    <!-- Integrator's custom CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <h1><a href="index.html">FlexBook Examples<a></h1>
+   <i> Simple examples of predefined FlexBook JavaScript components</i>
+
+    <hr>
+    <h2>User Profile</h2>
+    <div id="flexbook_profile"></div>
+    <div id="flexbook_profile2"></div>
+
+    <hr>
+    <form>
+	<input type="button" class="button_control" value="Expand All" onClick="
+	document.getElementById('flexbook_resource_list').style.display = 'block';
+	document.getElementById('flexbook_event_list').style.display = 'block';
+	document.getElementById('flexbook_event_list_packages').style.display = 'block';
+	document.getElementById('flexbook_resource_detail_1').style.display = 'block';
+	document.getElementById('flexbook_resource_calendar_1').style.display = 'block';
+	document.getElementById('flexbook_resource_calendar_2').style.display = 'block';
+	document.getElementById('flexbook_resource_calendar_3').style.display = 'block';
+	document.getElementById('flexbook_resource_calendar_4').style.display = 'block';
+	">
+
+	<input type="button" class="button_control" value="Collapse All" onClick="
+	document.getElementById('flexbook_resource_list').style.display = 'none';
+	document.getElementById('flexbook_event_list').style.display = 'none';
+	document.getElementById('flexbook_event_list_packages').style.display = 'none';
+	document.getElementById('flexbook_resource_detail_1').style.display = 'none';
+	document.getElementById('flexbook_resource_calendar_1').style.display = 'none';
+	document.getElementById('flexbook_resource_calendar_2').style.display = 'none';
+	document.getElementById('flexbook_resource_calendar_3').style.display = 'none';
+	document.getElementById('flexbook_resource_calendar_4').style.display = 'none';
+	">
+    </form>
+    <hr>
+    <h2>
+       List of all resources 
+       [ 
+       <a href="" onClick="document.getElementById('flexbook_resource_list').style.display = 'block'; return false">+</a>
+       <a href="" onClick="document.getElementById('flexbook_resource_list').style.display = 'none'; return false">-</a>
+       ]
+    </h2>
+    <div id="flexbook_resource_list"></div>
+
+    <hr>
+    <h2>
+       List of all events
+       [ 
+       <a href="" onClick="document.getElementById('flexbook_event_list').style.display = 'block'; return false">+</a>
+       <a href="" onClick="document.getElementById('flexbook_event_list').style.display = 'none'; return false">-</a>
+       ]
+    </h2>
+    <div id="flexbook_event_list2" style="overflow-y:scroll; height:250px;"></div>
+    <br>
+
+    <hr>
+    <h2>
+       List of events with tag 'package'
+       [ 
+       <a href="" onClick="document.getElementById('flexbook_event_list_packages').style.display = 'block'; return false">+</a>
+       <a href="" onClick="document.getElementById('flexbook_event_list_packages').style.display = 'none'; return false">-</a>
+       ]
+    </h2>
+    <div id="flexbook_event_list_packages"></div>
+    <br>
+
+    <hr>
+    <h2>
+       Resource detail of resource with ID 7
+       [ 
+       <a href="" onClick="document.getElementById('flexbook_resource_detail_1').style.display = 'block'; return false">+</a>
+       <a href="" onClick="document.getElementById('flexbook_resource_detail_1').style.display = 'none'; return false">-</a>
+       ]
+    </h2>
+    <div id="flexbook_resource_detail_1"></div>
+
+    <hr>
+    <h2>
+       Calendar of resource with ID 7
+       [ 
+       <a href="" onClick="document.getElementById('flexbook_resource_calendar_1').style.display = 'block'; return false">+</a>
+       <a href="" onClick="document.getElementById('flexbook_resource_calendar_1').style.display = 'none'; return false">-</a>
+       ]
+    </h2>
+    <div id="flexbook_resource_calendar_1"></div>
+
+    <hr>
+    <h2>
+       Calendar of resources with ID 577 and 578 focused to date 2016-11-02
+       [ 
+       <a href="" onClick="document.getElementById('flexbook_resource_calendar_2').style.display = 'block'; return false">+</a>
+       <a href="" onClick="document.getElementById('flexbook_resource_calendar_2').style.display = 'none'; return false">-</a>
+       ]
+    </h2>
+    <div id="flexbook_resource_calendar_2"></div>
+
+    <hr>
+    <h2>
+       Vertical calendar of resources with ID 577 and 578 focused to date 2016-11-02
+       [ 
+       <a href="" onClick="document.getElementById('flexbook_resource_calendar_3').style.display = 'block'; return false">+</a>
+       <a href="" onClick="document.getElementById('flexbook_resource_calendar_3').style.display = 'none'; return false">-</a>
+       ]
+    </h2>
+    <div id="flexbook_resource_calendar_3"></div>
+
+    <hr>
+    <h2>
+       Event calendar of actions taged with tag "kalendar"
+       [ 
+       <a href="" onClick="document.getElementById('flexbook_resource_calendar_4').style.display = 'block'; return false">+</a>
+       <a href="" onClick="document.getElementById('flexbook_resource_calendar_4').style.display = 'none'; return false">-</a>
+       ]
+    </h2>
+    <div id="flexbook_resource_calendar_4"></div>
+
+    <script>
+
+flbInit('https://www.flexbook.cz/ajax.php', 4, [
+{ type: 'flbProfile', placeHolder: 'flexbook_profile2', params: { language: 'cz', buttons: ['login','sendPassword','logout','profile','password','reservation','registration','credit'], format: { datetime: 'd.m. H:i', time: 'H:i' }, checkAttributeMandatory: 1, extraDiv: 'all', externalAccount: 1, disablePast: 1, hideAdvertising: 0, } }
+]);
+
+      flbInit('http://www.flexbook.cz/ajax.php',4, [
+
+             { 
+	       type: 'flbProfile',
+	       placeHolder: 'flexbook_profile',
+	       params: {
+			language: 'en',
+			buttons: ['login','logout','profile','password','reservation','registration','credit','sendPassword'],
+			checkAttributeMandatory: 1,
+			externalAccount: 1,
+			extraDiv: 1,
+		       },
+	     },
+
+	     { 
+	       type: 'flbResourceList',
+	       placeHolder: 'flexbook_resource_list',
+	     },
+
+	     { 
+	       type: 'flbEventList',
+	       placeHolder: 'flexbook_event_list2',
+	     },
+
+	     { 
+	       type: 'flbEventList',
+	       placeHolder: 'flexbook_event_list_packages',
+	       params: {
+            		tag: ['package'],
+	               }
+	     },
+
+	     { 
+	       type: 'flbResourceDetail',
+	       placeHolder: 'flexbook_resource_detail_1',
+	       params: {
+	        	resourceId: 7,
+	               }
+	     },
+
+	     { 
+	       type: 'flbResourceCalendar',
+	       placeHolder: 'flexbook_resource_calendar_1',
+	       params: {
+	        	resourceId: 7,
+			render: ['reservation','occupied','event'],
+			renderText: ['legend','name','description','price'],
+	               }
+	     },
+
+	     { 
+	       type: 'flbResourceCalendar',
+	       placeHolder: 'flexbook_resource_calendar_2',
+	       params: {
+			resourceId: [577,578],
+			dateStart: '2016-11-02',
+			resourceLabel: 'Stolky',
+			resourceWidth: 100,
+			slotWidth: 100,
+	               }
+	     },
+
+	     { 
+	       type: 'flbResourceCalendar',
+	       placeHolder: 'flexbook_resource_calendar_3',
+	       params: {
+			resourceId: [7,535,10],
+			render: ['reservation','occupied','event'],
+			viewDirection : 'vertical',
+	               }
+	     },
+
+	     { 
+	       type: 'flbEventCalendar',
+	       placeHolder: 'flexbook_resource_calendar_4',
+	       params: {
+            		tag: ['kalendar'],
+			dateStart: '2018-05-01',
+	               }
+	     }
+
+      ]);
+
+    </script>
+  </body>
+</html>
+
