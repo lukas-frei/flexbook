@@ -202,9 +202,11 @@ div.flb_calendar_legend div {
 	font-weight: 400;
 	font-size: 1.2em;
 }
-
 .fc-head {
 	background-color: #EEEEEE;
+}
+.fc-widget-header .fc-today {
+	background-color: #EEEEEE !important;
 }
 .fc-widget-header th {
 	padding-top: 0.5em !important;

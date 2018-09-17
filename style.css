@@ -187,6 +187,10 @@ div.flb_calendar_legend div {
   background-color: #EEEEEE;
 }
 
+.fc-widget-header .fc-today {
+  background-color: #EEEEEE !important;
+}
+
 .fc-widget-header th {
   padding-top: 0.5em !important;
   padding-bottom: 0.5em !important;
