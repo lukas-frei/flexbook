@@ -7,8 +7,8 @@
     </title>
 
     <!-- FlexBook JavaScripts -->
-    <script src="http://www.flexbook.cz/jq/jquery.js"></script>
-    <script src="http://www.flexbook.cz/flbv2.js"></script>
+    <script src="https://www.flexbook.cz/jq/jquery.js"></script>
+    <script src="https://www.flexbook.cz/flbv2.js"></script>
 
     <!-- Integrator's custom CSS -->
     <link rel="stylesheet" type="text/css" href="style.css" />
@@ -20,6 +20,9 @@
     <hr>
     <h2>User Profile</h2>
     <div id="flexbook_profile"></div>
+    <hr>
+    <div id="flexbook_profile2"></div>
+
 
     <hr>
     <form>
@@ -63,7 +66,7 @@
        <a href="" onClick="document.getElementById('flexbook_event_list').style.display = 'none'; return false">-</a>
        ]
     </h2>
-    <div id="flexbook_event_list2" style="overflow-y:scroll; height:250px;"></div>
+    <div id="flexbook_event_list2" style="overflow-y:scroll; height:650px;"></div>
     <br>
 
     <hr>
@@ -133,13 +136,14 @@ flbInit('https://www.flexbook.cz/ajax.php', 4, [
 { type: 'flbProfile', placeHolder: 'flexbook_profile2', params: { language: 'cz', buttons: ['login','sendPassword','logout','profile','password','reservation','registration','credit'], format: { datetime: 'd.m. H:i', time: 'H:i' }, checkAttributeMandatory: 1, extraDiv: 'all', externalAccount: 1, disablePast: 1, hideAdvertising: 0, } }
 ]);
 
+
       flbInit('http://www.flexbook.cz/ajax.php',4, [
 
              { 
 	       type: 'flbProfile',
 	       placeHolder: 'flexbook_profile',
 	       params: {
-			language: 'en',
+			language: 'cz',
 			buttons: ['login','logout','profile','password','reservation','registration','credit','sendPassword'],
 			checkAttributeMandatory: 1,
 			externalAccount: 1,

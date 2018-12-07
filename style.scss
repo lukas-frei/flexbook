@@ -38,7 +38,7 @@ $action-highlight-text: white;
 
 
 /* color of secondary buttons */
-$action-neutral: #333333;
+$action-neutral: black;
 
 /* color of text of secondary buttons on hover */
 $action-neutral-highlight-text: white;
@@ -55,10 +55,10 @@ $action-prepare:  #42A861;
 	font-family:  $font-stack;
 	color: $primary;
 	font-size: 16px;
-	line-height: 1.3em;
+	line-height: 1.4em;
 }
 input, .flb_button {
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 1em;
 }
 
@@ -87,6 +87,10 @@ input[type=button]:hover,
 	color: $action-neutral-highlight-text;
 	background-color: $action-neutral;
 }
+div.flb_profile div.button {
+	min-width: 550px;
+}
+
 
 /* buttons - primary */
 #flexbook_profile_flb_profile_login,
@@ -139,9 +143,11 @@ input[type=button]:hover,
 }
 /* inputs */
 .flb_output input[type=text], .flb_output input[type=password] {
-	border: 1px solid #9B9B9B;
+	border: 1px solid #C6C6C6;
 	margin: 2px;
-	padding: 2px 4px;
+	padding: 4px 6px;
+	border-radius: 3px;
+	min-width: 165px;
 }
 /* calendar and dialog defaults corections */
 .ui-dialog-buttonset button[type=button],
@@ -179,13 +185,61 @@ input[type=button]:hover,
 }
 
 /* detail reservation */
+.flb_event_detail .flb_event_name_label,
+.flb_resource_detail .flb_resource_name_label,
+.flb_resource_description_label {
+	display: none;
+}
+.flb_event_detail .flb_event_name,
+.flb_resource_detail .flb_resource_name {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+
 .flb_event_detail .input {
 	margin-top: 30px !important;
+	padding: 10px 0 10px 15px;
+	border-left: 6px solid $action;
+}
+.flb_event_detail .flb_event_reserve_attendee_label {
+	padding-top: 10px;
+}
+.flb_event_detail .attendee {
+	text-align: left;
+	padding-bottom: 10px;
+	padding-top: 5px;
+}
+table.attendee th {
+	font-weight: 400;
+	font-size: 1em;
 }
 div.flb_event_detail div.label {
 	min-width: 175px !important;
 }
+div.flb_event_detail .input>div.label {
+	min-width: 154px !important;
+}
 
+/* detail resource */
+.flb_resource_detail .flb_resource_description {
+	float: none;
+	clear: both;
+	padding-bottom: 10px;
+}
+.flb_resource_label_price {
+	padding-bottom: 10px;
+}
+.flb_resource_attributecategory_name {
+	font-weight: bold;
+}
+.flb_resource_attribute div.label {
+	font-weight: 400 !important;
+}
+.flb_resource_detail>input[type=button] {
+	display: block;
+	clear: both;
+}
 
 /* calendar
 ############################################ */
@@ -239,7 +293,7 @@ div.flb_calendar .event_providerEvent {
 
 /* dialog window */
 .ui-dialog,
-div.flb_profile div.flb_profile_extra {
+div.flb_profile_extra {
 	background-color: #FAFAFA !important;
 	border: 1px solid #9B9B9B !important;
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -267,7 +321,7 @@ div.flb_profile div.flb_profile_extra {
 .ui-dialog-buttonset {
 	float: left !important;
 	margin-left: 1.5em;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 /* */
 .ui-dialog .ui-dialog-titlebar-close {
@@ -278,13 +332,16 @@ div.flb_profile div.flb_profile_extra {
 .flb_inputTime {
 	width: 66px;
 }
-
+.ui-dialog-content .line span:first-of-type {
+	display: inline-block;
+	min-width: 80px;
+}
 
 /* profile dialogs
 ############################################ */
 
 /* global */
-div.flb_profile div.flb_profile_extra {
+div.flb_profile_extra {
 	padding: 20px !important;
 }
 .label.flb_title {
@@ -296,6 +353,16 @@ div.flb_profile div.flb_profile_extra {
 }
 .flb_profile_extra div.button {
 	margin-top: 10px;
+}
+.flb_profile_extra div.flb_profile div.label {
+	padding-top: 5px;
+}
+
+
+/* not loged in */
+#flb_core_flb_profile_title {
+	font-size: 1.2em;
+	margin-bottom: 10px;
 }
 
 /* inputs */
@@ -316,7 +383,8 @@ div.flb_profile div.flb_profile_extra {
 	margin-top: 2px;
 	margin-left: 2px;
 }
-div.flb_profile div.flb_profile_attributecategory_soubor {
+div.flb_profile div.flb_profile_attributecategory_soubor,
+div.flb_profile div.flb_profile_attributecategory {
 	border: none !important;
 	padding: 0 !important;
 }
@@ -341,6 +409,26 @@ input[type=checkbox] {
 }
 
 /* list of reservations */
+.flb_reservation_list_table th {
+	padding: 15px 0 5px 0;
+}
+.flb_reservation_list_item {
+	font-size: 0.8em;
+}
+div.flb_reservation_list td {
+	border-bottom: 1px solid #E3E3E3 !important;
+}
+div.flb_reservation_list .flb_reservation_list_item_start {
+	width: 105px !important;
+}
+div.flb_reservation_list .flb_reservation_list_item_price {
+	text-align: left !important;
+}
+div.flb_reservation_list .flb_button {
+	padding: 3px 10px 3px 10px;
+	font-size: 0.8em;
+}
+/*
 #flexbook_profile_flb_reservation_list_table {
 	max-width: 650px;
 }
@@ -353,7 +441,7 @@ div.flb_reservation_list .flb_reservation_list_item_price {
 div.flb_reservation_list td {
 	border-bottom: 1px solid gray;
 }
-/* buttons to left */
+/* buttons to left 
 #flexbook_profile_flb_reservation_list_data_body td:last-child { 
 		display: block; 
 		float: left;
@@ -369,6 +457,7 @@ div.flb_reservation_list td {
 .flb_reservation_list_table tbody tr th:last-child {
 	display: none;
 }
+*/
 
 /* login */
 .flb_registration_email_value {
@@ -383,12 +472,23 @@ div.flb_reservation_list td {
 
 /* popup */
 @media (max-width: 650px) {
-	div.flb_profile div.flb_profile_extra {
+	div.flb_profile_extra {
 		top: -1px !important;
 		left: -1px !important;
 		width: 100% !important;
 		height: 95% !important;
 	}
+	div.flb_profile div.button {
+		min-width: 340px;
+	}
+	.div.flb_profile div.label {
+		float: none;
+	}
+	.flb_output input[type=text],
+	.flb_output input[type=password] {
+		min-width: 300px;
+	}
+
 }
 
 /* lists */
@@ -404,6 +504,13 @@ div.flb_reservation_list td {
 	.flb_event_list_item .flb_event_list_item_desc,
 	.flb_resource_list_item .flb_resource_list_item_desc {
 		border-bottom: none;
+	}
+	.div.flb_reservation_list .flb_reservation_list_item_start {
+		width: 90px !important;
+	}
+	.flb_reservation_list_item_button_cancel {
+		display: inline-block;
+		margin-top: 5px;
 	}
 }
 
