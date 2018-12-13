@@ -43,20 +43,20 @@ input[type=button],
   padding: 6px 15px 5px 15px;
   margin-top: 3px;
   margin-right: 3px;
-  border: 1px solid black;
+  border: 1px solid #333333;
   border-radius: 3px;
   cursor: pointer;
   transition: all 0.2s;
   background-color: transparent;
   font-size: 14px;
   font-weight: 400 !important;
-  color: black;
+  color: #333333;
 }
 
 input[type=button]:hover,
 .flb_button:hover {
   color: white;
-  background-color: black;
+  background-color: #333333;
 }
 
 div.flb_profile div.button {
@@ -121,7 +121,7 @@ div.flb_profile div.button {
   margin: 2px;
   padding: 4px 6px;
   border-radius: 3px;
-  min-width: 165px;
+  min-width: 175px;
 }
 
 /* calendar and dialog defaults corections */
@@ -129,7 +129,7 @@ div.flb_profile div.button {
 .fc-left button[type=button] {
   background-color: transparent !important;
   background-image: none !important;
-  border: 1px solid black !important;
+  border: 1px solid #333333 !important;
 }
 
 .ui-button-text-only .ui-button-text {
@@ -138,7 +138,7 @@ div.flb_profile div.button {
 
 .ui-dialog-buttonset button[type=button]:hover {
   color: white !important;
-  background-color: black !important;
+  background-color: #333333 !important;
 }
 
 /* lists
@@ -165,7 +165,8 @@ div.flb_profile div.button {
 /* detail reservation */
 .flb_event_detail .flb_event_name_label,
 .flb_resource_detail .flb_resource_name_label,
-.flb_resource_description_label {
+.flb_resource_description_label,
+.flb_event_description_label {
   display: none;
 }
 
@@ -173,11 +174,16 @@ div.flb_profile div.button {
 .flb_resource_detail .flb_resource_name {
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+}
+
+.flb_event_description {
+  padding-bottom: 15px;
+  clear: both;
 }
 
 .flb_event_detail .input {
-  margin-top: 30px !important;
+  margin-top: 15px !important;
   padding: 10px 0 10px 15px;
   border-left: 6px solid #42A861;
 }
@@ -189,7 +195,6 @@ div.flb_profile div.button {
 .flb_event_detail .attendee {
   text-align: left;
   padding-bottom: 10px;
-  padding-top: 5px;
 }
 
 table.attendee th {

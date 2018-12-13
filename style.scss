@@ -38,7 +38,7 @@ $action-highlight-text: white;
 
 
 /* color of secondary buttons */
-$action-neutral: black;
+$action-neutral: #333333;
 
 /* color of text of secondary buttons on hover */
 $action-neutral-highlight-text: white;
@@ -147,7 +147,7 @@ div.flb_profile div.button {
 	margin: 2px;
 	padding: 4px 6px;
 	border-radius: 3px;
-	min-width: 165px;
+	min-width: 175px;
 }
 /* calendar and dialog defaults corections */
 .ui-dialog-buttonset button[type=button],
@@ -187,18 +187,24 @@ div.flb_profile div.button {
 /* detail reservation */
 .flb_event_detail .flb_event_name_label,
 .flb_resource_detail .flb_resource_name_label,
-.flb_resource_description_label {
+.flb_resource_description_label,
+.flb_event_description_label {
 	display: none;
 }
 .flb_event_detail .flb_event_name,
 .flb_resource_detail .flb_resource_name {
 	font-size: 24px;
 	font-weight: bold;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
+}
+.flb_event_description {
+	padding-bottom: 15px;
+	clear: both;
+
 }
 
 .flb_event_detail .input {
-	margin-top: 30px !important;
+	margin-top: 15px !important;
 	padding: 10px 0 10px 15px;
 	border-left: 6px solid $action;
 }
@@ -208,7 +214,6 @@ div.flb_profile div.button {
 .flb_event_detail .attendee {
 	text-align: left;
 	padding-bottom: 10px;
-	padding-top: 5px;
 }
 table.attendee th {
 	font-weight: 400;
