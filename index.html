@@ -129,11 +129,12 @@
        ]
     </h2>
     <div id="flexbook_resource_calendar_4"></div>
+    <div id="flexbook_resource_availability_1"></div>
 
     <script>
 
 flbInit('https://www.flexbook.cz/ajax.php', 4, [
-{ type: 'flbProfile', placeHolder: 'flexbook_profile2', params: { language: 'cz', buttons: ['login','sendPassword','logout','profile','password','reservation','registration','credit'], format: { datetime: 'd.m. H:i', time: 'H:i' }, checkAttributeMandatory: 1, extraDiv: 'all', externalAccount: 1, disablePast: 1, hideAdvertising: 0, } }
+{ type: 'flbProfile', placeHolder: 'flexbook_profile2', params: { language: 'en', buttons: ['login','sendPassword','logout','profile','password','reservation','registration','credit'], format: { datetime: 'd.m. H:i', time: 'H:i' }, checkAttributeMandatory: 1, extraDiv: 'all', externalAccount: 1, disablePast: 1, hideAdvertising: 0, } }
 ]);
 
 
@@ -143,7 +144,7 @@ flbInit('https://www.flexbook.cz/ajax.php', 4, [
 	       type: 'flbProfile',
 	       placeHolder: 'flexbook_profile',
 	       params: {
-			language: 'cz',
+			language: 'en',
 			buttons: ['login','logout','profile','password','reservation','registration','credit','sendPassword'],
 			checkAttributeMandatory: 1,
 			externalAccount: 1,
@@ -215,8 +216,19 @@ flbInit('https://www.flexbook.cz/ajax.php', 4, [
 	       params: {
             		tag: ['kalendar'],
 			dateStart: '2018-05-01',
+      timeSlot: '60', 
+      timeMin: '08:00', 
+      timeMax: '17:00',
 	               }
-	     }
+	     },
+
+       { 
+         type: 'flbResourceAvailability',
+         placeHolder: 'flexbook_resource_availability_1',
+         params: {
+            tag: ['chalupa'],
+                 }
+       },
 
       ]);
 

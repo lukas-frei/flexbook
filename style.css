@@ -60,7 +60,7 @@ input[type=button]:hover,
 }
 
 div.flb_profile div.button {
-  min-width: 550px;
+  min-width: 600px;
 }
 
 /* buttons - primary */
@@ -70,7 +70,8 @@ div.flb_profile div.button {
 #flexbook_profile_flb_registration_next,
 #flexbook_profile_flb_registration_finish,
 .flb_event_list_item_button_reserve,
-.flb_event_detail .button input:last-child {
+.flb_event_detail .button input:last-child,
+.flb_resource_availability_item input[type=button] {
   color: white;
   background-color: #42A861;
   border: 1px solid #42A861;
@@ -83,7 +84,8 @@ div.flb_profile div.button {
 #flexbook_profile_flb_registration_next:hover,
 #flexbook_profile_flb_registration_finish:hover,
 .flb_event_list_item_button_reserve:hover,
-.flb_event_detail .button input:last-child:hover {
+.flb_event_detail .button input:last-child:hover,
+.flb_resource_availability_item input[type=button]:hover {
   color: white;
   background-color: #3CBD61;
   border-color: #3CBD61;
@@ -232,6 +234,43 @@ div.flb_event_detail .input > div.label {
 .flb_resource_detail > input[type=button] {
   display: block;
   clear: both;
+}
+
+/* resource availability */
+div.flb_resource_availability_list div.flb_resource_availability_item {
+  border: none !important;
+  border-bottom: 1px solid gray !important;
+  padding: 20px 10px !important;
+  margin-bottom: 10px !important;
+}
+
+div.flb_resource_availability_list div.flb_resource_availability_item div.photo {
+  width: 50% !important;
+}
+
+div.flb_resource_availability_list div.flb_resource_availability_item div.photo div.fotorama {
+  width: 100% !important;
+}
+
+div.flb_resource_availability_list div.flb_resource_availability_item div.info {
+  width: 48% !important;
+  float: right !important;
+}
+
+div.flb_resource_availability_list div.flb_resource_availability_item div.reservation {
+  width: 48% !important;
+  float: right !important;
+  margin-top: 30px;
+  clear: both;
+}
+
+div.flb_resource_availability_list div.flb_resource_availability_item div.info div.basic div.description {
+  padding-bottom: 10px;
+}
+
+.flb_resource_attributecategory .label,
+.flb_resource_attributecategory .value {
+  display: inline-block;
 }
 
 /* calendar
@@ -529,5 +568,19 @@ div.flb_reservation_list td {
   .flb_reservation_list_item_button_cancel {
     display: inline-block;
     margin-top: 5px;
+  }
+  /* lists - availability*/
+  div.flb_resource_availability_list div.flb_resource_availability_item div.photo {
+    width: 100% !important;
+    margin-bottom: 30px;
+  }
+  div.flb_resource_availability_list div.flb_resource_availability_item div.photo div.fotorama {
+    width: 100% !important;
+  }
+  div.flb_resource_availability_list div.flb_resource_availability_item div.info {
+    width: 100% !important;
+  }
+  div.flb_resource_availability_list div.flb_resource_availability_item div.reservation {
+    width: 100% !important;
   }
 }
